@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CyberSafe Lab | Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="skip-bar">
+    <a class="skip-link" href="#main">[Skip to main content]</a>
+    <span class="skip-hint">(visible on keyboard focus)</span>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">CyberSafe Lab</a>
+      <nav aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="library.html">Library</a></li>
+          <li><a href="progress.html">My Progress</a></li>
+          <li><a href="about.html">About and Help</a></li>
+        </ul>
+      </nav>
+
+      <div class="theme-picker">
+        <button id="theme-btn" class="theme-btn" type="button"
+                aria-haspopup="true" aria-expanded="false" aria-controls="theme-menu">
+          Theme: <span id="theme-label">Light</span> <span aria-hidden="true" class="chev">v</span>
+        </button>
+        <ul id="theme-menu" class="theme-menu" role="menu" hidden>
+          <li role="none"><button role="menuitemradio" aria-checked="true"  data-theme="light"    type="button">Light</button></li>
+          <li role="none"><button role="menuitemradio" aria-checked="false" data-theme="dark"     type="button">Dark</button></li>
+          <li role="none"><button role="menuitemradio" aria-checked="false" data-theme="contrast" type="button">High contrast</button></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <div class="disclaimer-bar">
+    <p>Training exercise only. All messages are fictional. This is a rule-based educational exercise, not a real scam detector or an official reporting service.</p>
+  </div>
+
+  <main id="main" tabindex="-1">
+    <h1>Spot the signs. Choose a safe next step.</h1>
+
+    <p class="notice" role="note">TRAINING NOTICE: Every message in this lab is fictional. Scores describe your practice in this exercise, not the safety of real messages.</p>
+
+    <div class="start-row">
+      <p class="count" id="count"><span id="done">0</span> of <span id="total">12</span> scenarios submitted</p>
+      <button id="start-btn" class="btn-primary" type="button">Start Learning</button>
+      <span class="hint">(becomes Continue Learning once started)</span>
+    </div>
+    <p id="status" class="sr-status" role="status" aria-live="polite"></p>
+
+    <section aria-labelledby="how-title">
+      <h2 id="how-title">How it works</h2>
+      <ol class="steps">
+        <li class="card"><span class="num" aria-hidden="true">1</span><h3>Read the message</h3><p>Sender, context and text are shown as inert training text.</p></li>
+        <li class="card"><span class="num" aria-hidden="true">2</span><h3>Pick the cues</h3><p>Choose any warning signs you notice. None is a valid answer.</p></li>
+        <li class="card"><span class="num" aria-hidden="true">3</span><h3>Choose an action</h3><p>Pick the safest next step.</p></li>
+        <li class="card"><span class="num" aria-hidden="true">4</span><h3>Read the explanation</h3><p>See your score and why.</p></li>
+      </ol>
+    </section>
+
+    <p class="rules">Golden Rules: 2 universal usability (beginner instructions), 4 clear task completion (single clear start action). Accessibility: skip link, one H1, landmarks (header, main, footer), visible focus.</p>
+  </main>
+
+  <footer class="site-footer">
+    <p>CyberSafe Lab. Fictional training content for education only.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
