@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scenario Library | CyberSafe Lab</title>
+  <link rel="stylesheet" href="SL.css">
+</head>
+<body>
+  <div class="skip-bar">
+    <a class="skip-link" href="#main"></a> //Skip to main content
+    <span class="skip-hint"></span> //visible on keyboard focus
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">CyberSafe Lab</a>
+
+      <button id="menu-btn" class="ctl menu-btn" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+
+      <nav id="main-nav" class="main-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="/CyberSafe-Scam/HomePage/Home.html">Home</a></li>
+          <li><a href="index.html" aria-current="page">Library</a></li>
+          <li><a href="progress.html">My Progress</a></li>
+          <li><a href="about.html">About and Help</a></li>
+        </ul>
+      </nav>
+
+      <div class="theme-picker">
+        <button id="theme-btn" class="ctl" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="theme-menu">
+          <span class="theme-word">Theme: </span><span id="theme-label">Light</span> <span aria-hidden="true" class="chev">v</span>
+        </button>
+        <ul id="theme-menu" class="theme-menu" role="menu" hidden>
+          <li role="none"><button role="menuitemradio" aria-checked="true" data-theme="light" type="button">Light</button></li>
+          <li role="none"><button role="menuitemradio" aria-checked="false" data-theme="dark" type="button">Dark</button></li>
+          <li role="none"><button role="menuitemradio" aria-checked="false" data-theme="contrast" type="button">High contrast</button></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <h1>Scenario Library</h1>
+
+    <form class="filters" id="filters" role="search" aria-label="Filter scenarios" onsubmit="return false">
+      <div class="field field-search">
+        <label for="search">Search title and message</label>
+        <input id="search" type="search" placeholder="e.g. parcel" autocomplete="off">
+      </div>
+      <div class="field">
+        <label for="category">Category</label>
+        <select id="category"><option value="">All categories</option></select>
+      </div>
+      <div class="field">
+        <label for="progress">Progress</label>
+        <select id="progress">
+          <option value="">All</option>
+          <option value="submitted">Submitted</option>
+          <option value="draft">Draft saved</option>
+          <option value="unanswered">Unanswered</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="sort">Sort</label>
+        <select id="sort">
+          <option value="az">Title A to Z</option>
+          <option value="za">Title Z to A</option>
+          <option value="num">Scenario number</option>
+        </select>
+      </div>
+      <button id="clear-top" class="btn" type="button">Clear Filters</button>
+    </form>
+
+    <p id="result-count" class="result-count" role="status" aria-live="polite"></p>
+
+    <ul id="grid" class="grid" aria-label="Scenarios"></ul>
+
+    <section id="empty" class="empty" hidden aria-labelledby="empty-title">
+      <h2 id="empty-title">No scenarios match your search.</h2>
+      <p>Try a different word or clear the filters.</p>
+      <button id="clear-empty" class="btn" type="button">Clear Filters</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Training exercise only. All messages are fictional. This is a rule-based educational exercise, not a real scam detector or an official reporting service.</p>
+  </footer>
+
+  <script src="Library-Script.js"></script>
+</body>
+</html>
